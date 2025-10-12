@@ -11,6 +11,7 @@ import { FilmsService } from './films/films.service';
 
 import { Film, FilmSchema } from './films/schemas/film.schema';
 import { MongooseModule } from '@nestjs/mongoose/dist/mongoose.module';
+import { FilmsRepository } from './repository/afisha.repository';
 
 @Module({
   imports: [
@@ -30,6 +31,6 @@ import { MongooseModule } from '@nestjs/mongoose/dist/mongoose.module';
     }),
   ],
   controllers: [FilmsController, OrderController],
-  providers: [configProvider, OrderService, FilmsService],
+  providers: [configProvider, OrderService, FilmsService, FilmsRepository],
 })
 export class AppModule {}
