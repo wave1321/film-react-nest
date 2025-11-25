@@ -2,7 +2,7 @@ import { Controller, Get, Param, ParseUUIDPipe } from '@nestjs/common';
 import { FilmsResponseDto, ScheduleResponseDto } from './dto/films.dto';
 import { FilmsService } from './films.service';
 
-@Controller('api/afisha')
+@Controller()
 export class FilmsController {
   constructor(private readonly filmsService: FilmsService) {}
 
