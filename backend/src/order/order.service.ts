@@ -1,6 +1,6 @@
 import { Injectable, BadRequestException } from '@nestjs/common';
 import { CreateOrderDto, CreateOrderItemDto } from './dto/create-order.dto';
-import { FilmsRepository } from 'src/repository/afisha.repository';
+import { FilmsRepository } from '../repository/afisha.repository';
 
 @Injectable()
 export class OrderService {
