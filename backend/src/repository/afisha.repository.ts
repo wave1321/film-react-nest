@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Film } from 'src/entities/film.entity';
-import { Schedule } from 'src/entities/schedule.entity';
+import { Film } from '../entities/film.entity';
+import { Schedule } from '../entities/schedule.entity';
 import { Repository } from 'typeorm';
 
 @Injectable()
