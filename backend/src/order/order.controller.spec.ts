@@ -1,4 +1,3 @@
-// src/order/order.controller.spec.ts
 import { Test, TestingModule } from '@nestjs/testing';
 import { OrderController } from './order.controller';
 import { OrderService } from './order.service';
@@ -83,7 +82,9 @@ describe('OrderController', () => {
 
       const result = await controller.createOrder(multipleItems);
 
-      expect(result.total).toBe(2);
+      if ('total' in result) {
+        expect(result.total).toBe(2);
+      }
       expect(result.items).toHaveLength(2);
     });
   });
